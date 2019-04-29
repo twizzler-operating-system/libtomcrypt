@@ -1,0 +1,11 @@
+set(MODE_LRW_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_start.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_getiv.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_done.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_process.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_setiv.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_decrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/lrw_encrypt.c
+    PARENT_SCOPE
+)

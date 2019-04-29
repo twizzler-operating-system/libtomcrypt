@@ -1,0 +1,10 @@
+set(MAC_HMAC_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/hmac_init.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hmac_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hmac_process.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hmac_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hmac_file.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hmac_memory_multi.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hmac_done.c
+    PARENT_SCOPE
+)

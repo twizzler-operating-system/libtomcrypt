@@ -1,0 +1,13 @@
+set(PK_DH_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_set_pg_dhparam.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_import.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_free.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_set.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_check_pubkey.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_shared_secret.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_export_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_generate_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh_export.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dh.c
+    PARENT_SCOPE
+)

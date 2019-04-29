@@ -1,0 +1,5 @@
+set(MISC_BASE64_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/base64_encode.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/base64_decode.c
+    PARENT_SCOPE
+)

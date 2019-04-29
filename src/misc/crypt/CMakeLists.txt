@@ -1,0 +1,34 @@
+set(MISC_CRYPT_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_hash_any.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_constants.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_unregister_cipher.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_hash_descriptor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_prng_rng_descriptor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_cipher_id.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_cipher_descriptor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_unregister_hash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_argchk.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_fsa.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_sizes.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_hash_id.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_hash_is_valid.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_cipher.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_cipher_any.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_inits.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_register_hash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_register_all_prngs.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_prng_is_valid.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_cipher_is_valid.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_ltc_mp_descriptor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_prng_descriptor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_hash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_register_all_hashes.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_prng.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_register_cipher.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_register_all_ciphers.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_unregister_prng.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_register_prng.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_hash_oid.c
+    PARENT_SCOPE
+)

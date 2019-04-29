@@ -1,0 +1,5 @@
+set(STREAM_RC4_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/rc4_stream.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rc4_test.c
+    PARENT_SCOPE
+)

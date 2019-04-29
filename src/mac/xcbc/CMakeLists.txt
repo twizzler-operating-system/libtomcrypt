@@ -1,0 +1,10 @@
+set(MAC_XCBC_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_done.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_process.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_file.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_memory_multi.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_init.c
+    PARENT_SCOPE
+)

@@ -1,0 +1,9 @@
+set(MODE_CFB_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/cfb_done.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/cfb_start.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/cfb_getiv.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/cfb_decrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/cfb_encrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/cfb_setiv.c
+    PARENT_SCOPE
+)

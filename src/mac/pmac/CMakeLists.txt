@@ -1,0 +1,12 @@
+set(MAC_PMAC_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_file.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_init.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_shift_xor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_ntz.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_memory_multi.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_done.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pmac_process.c
+    PARENT_SCOPE
+)

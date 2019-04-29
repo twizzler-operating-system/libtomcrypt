@@ -1,0 +1,11 @@
+set(ENCAUTH_CCM_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_add_nonce.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_done.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_reset.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_add_aad.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_process.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ccm_init.c
+    PARENT_SCOPE
+)

@@ -1,0 +1,5 @@
+set(MISC_BASE32_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/base32_encode.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/base32_decode.c
+    PARENT_SCOPE
+)

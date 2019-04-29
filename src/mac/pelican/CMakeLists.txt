@@ -1,0 +1,6 @@
+set(MAC_PELICAN_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/pelican_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pelican_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/pelican.c
+    PARENT_SCOPE
+)

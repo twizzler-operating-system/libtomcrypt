@@ -1,0 +1,14 @@
+set(ENCAUTH_OCB_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_init.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/s_ocb_done.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_shift_xor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_decrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_decrypt_verify_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_ntz.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_done_encrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_encrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_done_decrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb_encrypt_authenticate_memory.c
+    PARENT_SCOPE
+)

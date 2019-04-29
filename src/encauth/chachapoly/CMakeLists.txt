@@ -1,0 +1,12 @@
+set(CHACHAPOLY_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_decrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_encrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_setiv.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_add_aad.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_init.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_setiv_rfc7905.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha20poly1305_done.c
+    PARENT_SCOPE
+)

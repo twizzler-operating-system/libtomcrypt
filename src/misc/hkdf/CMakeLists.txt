@@ -1,0 +1,5 @@
+set(MISC_HKDF_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/hkdf.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hkdf_test.c
+    PARENT_SCOPE
+)

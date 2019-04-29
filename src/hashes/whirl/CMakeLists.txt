@@ -1,0 +1,5 @@
+set(HASH_WHIRL_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/whirl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/whirltab.c
+    PARENT_SCOPE
+)

@@ -1,0 +1,4 @@
+set(PK_ASN1_DER_CHOICE_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/der_decode_choice.c
+    PARENT_SCOPE
+)

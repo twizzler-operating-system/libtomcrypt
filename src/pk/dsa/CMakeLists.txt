@@ -1,0 +1,17 @@
+set(PK_DSA_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_decrypt_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_set_pqg_dsaparam.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_make_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_free.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_verify_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_encrypt_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_verify_hash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_generate_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_export.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_generate_pqg.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_shared_secret.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_import.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_set.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/dsa_sign_hash.c
+    PARENT_SCOPE
+)

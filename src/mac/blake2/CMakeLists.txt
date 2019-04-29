@@ -1,0 +1,13 @@
+set(MAC_BLAKE2_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2bmac_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2smac.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2bmac_file.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2smac_memory_multi.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2bmac_memory_multi.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2smac_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2smac_file.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2bmac_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2bmac.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/blake2smac_test.c
+    PARENT_SCOPE
+)

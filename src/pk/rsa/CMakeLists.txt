@@ -1,0 +1,17 @@
+set(PK_RSA_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_exptmod.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_make_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_import_x509.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_decrypt_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_import.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_get_size.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_set.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_sign_hash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_export.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_sign_saltlen_get.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_encrypt_key.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_import_pkcs8.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_verify_hash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rsa_free.c
+    PARENT_SCOPE
+)

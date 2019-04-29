@@ -1,0 +1,15 @@
+set(ENCAUTH_OCB3_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_int_xor_blocks.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_decrypt_verify_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_encrypt_authenticate_memory.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_init.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_add_aad.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_decrypt_last.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_encrypt_last.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_int_ntz.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_encrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_decrypt.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_done.c
+    PARENT_SCOPE
+)

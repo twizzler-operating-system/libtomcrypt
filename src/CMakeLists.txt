@@ -1,0 +1,13 @@
+include_directories(headers)
+
+add_subdirectory(ciphers)
+add_subdirectory(encauth)
+add_subdirectory(hashes)
+add_subdirectory(headers)
+add_subdirectory(mac)
+add_subdirectory(math)
+add_subdirectory(pk)
+add_subdirectory(prngs)
+add_subdirectory(misc)
+add_subdirectory(modes)
+add_subdirectory(stream)

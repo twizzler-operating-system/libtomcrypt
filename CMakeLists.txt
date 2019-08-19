@@ -38,7 +38,7 @@ set_target_properties(${PROJECT_NAME}-shared PROPERTIES OUTPUT_NAME ${PROJECT_NA
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES SOVERSION ${PROJECT_VERSION})
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES PUBLIC_HEADER "${${PROJECT_NAME}-public-headers}")
 
-target_include_directories(${PROJECT_NAME}-shared INTERFACE
+target_include_directories(${PROJECT_NAME}-shared PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/headers>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}>
 )
@@ -47,7 +47,7 @@ target_include_directories(${PROJECT_NAME}-shared INTERFACE
 set_target_properties(${PROJECT_NAME}-static PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 set_target_properties(${PROJECT_NAME}-static PROPERTIES PUBLIC_HEADER "${${PROJECT_NAME}-public-headers}")
 
-target_include_directories(${PROJECT_NAME}-static INTERFACE
+target_include_directories(${PROJECT_NAME}-static PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/headers>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}>
 )

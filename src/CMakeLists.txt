@@ -1,5 +1,3 @@
-include_directories(headers)
-
 add_subdirectory(ciphers)
 add_subdirectory(encauth)
 add_subdirectory(hashes)

@@ -135,10 +135,10 @@ target_include_directories(${PROJECT_NAME}-static INTERFACE
 #---------------------------------------------------------------------------------------
 # Install/export targets and files
 #---------------------------------------------------------------------------------------
-set(CONFIG_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
-set(PROJECT_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake")
-set(PROJECT_CONFIG_FILE "${PROJECT_NAME}-config.cmake")
-set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
+set(CONFIG_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/lib${PROJECT_NAME}")
+set(PROJECT_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/lib${PROJECT_NAME}-config-version.cmake")
+set(PROJECT_CONFIG_FILE "lib${PROJECT_NAME}-config.cmake")
+set(TARGETS_EXPORT_NAME "lib${PROJECT_NAME}Targets")
 
 # generate package version file
 write_basic_package_version_file(

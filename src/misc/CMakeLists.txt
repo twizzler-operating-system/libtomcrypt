@@ -5,7 +5,10 @@ option(ENABLE_MISC_BASE64 "Enable base64" TRUE)
 option(ENABLE_MISC_CRYPT "Enable crypt" TRUE)
 option(ENABLE_MISC_HKDF "Enable hkdf" TRUE)
 option(ENABLE_MISC_PADDING "Enable padding" TRUE)
+option(ENABLE_MISC_PKCS12 "Enable pkcs12" TRUE)
 option(ENABLE_MISC_PKCS5 "Enable pkcs5" TRUE)
+option(ENABLE_MISC_SSH "Enable ssh" TRUE)
+option(ENABLE_MISC_PBES "Enable pbes" TRUE)
 
 set(MISC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/copy_or_zeromem.c
@@ -52,9 +55,24 @@ if(ENABLE_MISC_PADDING)
     list(APPEND MISC_SOURCES ${MISC_PADDING_SOURCES})
 endif()
 
+if(ENABLE_MISC_PKCS12)
+    add_subdirectory(pkcs12)
+    list(APPEND MISC_SOURCES ${MISC_PKCS12_SOURCES})
+endif()
+
 if(ENABLE_MISC_PKCS5)
     add_subdirectory(pkcs5)
     list(APPEND MISC_SOURCES ${MISC_PKCS5_SOURCES})
+endif()
+
+if(ENABLE_MISC_SSH)
+    add_subdirectory(ssh)
+    list(APPEND MISC_SOURCES ${MISC_SSH_SOURCES})
+endif()
+
+if(ENABLE_MISC_PBES)
+    add_subdirectory(pbes)
+    list(APPEND MISC_SOURCES ${MISC_PBES_SOURCES})
 endif()
 
 #-----------------------------------------------------------------------------

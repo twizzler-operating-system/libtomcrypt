@@ -1,5 +1,6 @@
 set(STREAM_RC4_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/rc4_stream.c
     ${CMAKE_CURRENT_SOURCE_DIR}/rc4_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rc4_stream_memory.c
     PARENT_SCOPE
 )

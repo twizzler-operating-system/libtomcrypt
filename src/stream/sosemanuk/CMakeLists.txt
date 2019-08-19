@@ -1,5 +1,6 @@
 set(STREAM_SOSEMANUK_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/sosemanuk.c
     ${CMAKE_CURRENT_SOURCE_DIR}/sosemanuk_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/sosemanuk_memory.c
     PARENT_SCOPE
 )

@@ -6,5 +6,6 @@ set(STREAM_CHACHA_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/chacha_ivctr64.c
     ${CMAKE_CURRENT_SOURCE_DIR}/chacha_setup.c
     ${CMAKE_CURRENT_SOURCE_DIR}/chacha_done.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/chacha_memory.c
     PARENT_SCOPE
 )

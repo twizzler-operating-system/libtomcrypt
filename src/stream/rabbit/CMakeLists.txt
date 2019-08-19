@@ -1,4 +1,5 @@
 set(STREAM_RABBIT_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/rabbit.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/rabbit_memory.c
     PARENT_SCOPE
 )

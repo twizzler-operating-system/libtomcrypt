@@ -115,7 +115,7 @@ set_target_properties(${PROJECT_NAME}-shared PROPERTIES PUBLIC_HEADER "${${PROJE
 
 target_include_directories(${PROJECT_NAME}-shared INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/headers>
-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}>
 )
 
 add_library(${PROJECT_NAME}-static STATIC
@@ -136,7 +136,7 @@ set_target_properties(${PROJECT_NAME}-static PROPERTIES PUBLIC_HEADER "${${PROJE
 
 target_include_directories(${PROJECT_NAME}-static INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/headers>
-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}>
 )
 
 #---------------------------------------------------------------------------------------

@@ -1,3 +1,11 @@
+# Encauth options
+option(ENABLE_ENCAUTH_CCM "Enable ccm" TRUE)
+option(ENABLE_ENCAUTH_CHACHAPOLY "Enable chachapoly" TRUE)
+option(ENABLE_ENCAUTH_EAX "Enable eax" TRUE)
+option(ENABLE_ENCAUTH_GCM "Enable gcm" TRUE)
+option(ENABLE_ENCAUTH_OCB "Enable ocb" TRUE)
+option(ENABLE_ENCAUTH_OCB3 "Enable ocb3" TRUE)
+
 set(ENCAUTH_SOURCES)
 
 if(ENABLE_ENCAUTH_CCM)

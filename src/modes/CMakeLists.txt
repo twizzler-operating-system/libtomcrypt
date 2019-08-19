@@ -1,3 +1,13 @@
+# Modes options
+option(ENABLE_MODE_CBC "Enable cbc mode" TRUE)
+option(ENABLE_MODE_CFB "Enable cfb mode" TRUE)
+option(ENABLE_MODE_CTR "Enable ctr mode" TRUE)
+option(ENABLE_MODE_ECB "Enable ecb mode" TRUE)
+option(ENABLE_MODE_F8 "Enable f8 mode" TRUE)
+option(ENABLE_MODE_LRW "Enable lrw mode" TRUE)
+option(ENABLE_MODE_OFB "Enable ofb mode" TRUE)
+option(ENABLE_MODE_XTS "Enable xts mode" TRUE)
+
 set(MODES_SOURCES)
 
 if(ENABLE_MODE_CBC)

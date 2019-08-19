@@ -1,3 +1,11 @@
+# Stream options
+option(ENABLE_STREAM_CHACHA "Enable chacha stream" TRUE)
+option(ENABLE_STREAM_RABBIT "Enable rabbit stream" TRUE)
+option(ENABLE_STREAM_RC4 "Enable rc4 stream" TRUE)
+option(ENABLE_STREAM_SALSA20 "Enable salsa20 stream" TRUE)
+option(ENABLE_STREAM_SOBER128 "Enable sober128 stream" TRUE)
+option(ENABLE_STREAM_SOSEMANUK "Enable sosemanuk stream" TRUE)
+
 set(STREAM_SOURCES)
 
 if(ENABLE_STREAM_CHACHA)

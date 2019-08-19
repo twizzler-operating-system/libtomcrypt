@@ -1,3 +1,13 @@
+# Mac options
+option(ENABLE_MAC_BLAKE2 "Enable blake2" TRUE)
+option(ENABLE_MAC_F9 "Enable f9" TRUE)
+option(ENABLE_MAC_HMAC "Enable hmac" TRUE)
+option(ENABLE_MAC_OMAC "Enable omac" TRUE)
+option(ENABLE_MAC_PELICAN "Enable pelican" TRUE)
+option(ENABLE_MAC_PMAC "Enable pmac" TRUE)
+option(ENABLE_MAC_POLY1305 "Enable poly1305" TRUE)
+option(ENABLE_MAC_XCBC "Enable xcbc" TRUE)
+
 set(MAC_SOURCES)
 
 if(ENABLE_MAC_BLAKE2)

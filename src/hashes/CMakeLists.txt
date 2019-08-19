@@ -1,3 +1,15 @@
+# Hash options
+option(ENABLE_HASH_MD "Enable md" TRUE)
+option(ENABLE_HASH_RMD "Enable rmd" TRUE)
+option(ENABLE_HASH_SHA1 "Enable sha1" TRUE)
+option(ENABLE_HASH_SHA2 "Enable sha2" TRUE)
+option(ENABLE_HASH_SHA3 "Enable sha3" TRUE)
+option(ENABLE_HASH_TIGER "Enable tiger" TRUE)
+option(ENABLE_HASH_BLAKE "Enable blake" TRUE)
+option(ENABLE_HASH_CHC "Enable chc" TRUE)
+option(ENABLE_HASH_HELPER "Enable helper" TRUE)
+option(ENABLE_HASH_WHIRL "Enable whirl" TRUE)
+
 set(HASH_SOURCES)
 
 set(HASH_MD_SOURCES

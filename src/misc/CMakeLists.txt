@@ -1,3 +1,12 @@
+# Misc options
+option(ENABLE_MISC_BASE16 "Enable base16" TRUE)
+option(ENABLE_MISC_BASE32 "Enable base32" TRUE)
+option(ENABLE_MISC_BASE64 "Enable base64" TRUE)
+option(ENABLE_MISC_CRYPT "Enable crypt" TRUE)
+option(ENABLE_MISC_HKDF "Enable hkdf" TRUE)
+option(ENABLE_MISC_PADDING "Enable padding" TRUE)
+option(ENABLE_MISC_PKCS5 "Enable pkcs5" TRUE)
+
 set(MISC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/copy_or_zeromem.c
     ${CMAKE_CURRENT_SOURCE_DIR}/error_to_string.c

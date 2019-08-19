@@ -9,74 +9,7 @@ include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
 #-----------------------------------------------------------------------------
-# Options
 #-----------------------------------------------------------------------------
-
-# Encauth options
-option(ENABLE_ENCAUTH_CCM "Enable ccm" TRUE)
-option(ENABLE_ENCAUTH_CHACHAPOLY "Enable chachapoly" TRUE)
-option(ENABLE_ENCAUTH_EAX "Enable eax" TRUE)
-option(ENABLE_ENCAUTH_GCM "Enable gcm" TRUE)
-option(ENABLE_ENCAUTH_OCB "Enable ocb" TRUE)
-option(ENABLE_ENCAUTH_OCB3 "Enable ocb3" TRUE)
-
-# Hash options
-option(ENABLE_HASH_MD "Enable md" TRUE)
-option(ENABLE_HASH_RMD "Enable rmd" TRUE)
-option(ENABLE_HASH_SHA1 "Enable sha1" TRUE)
-option(ENABLE_HASH_SHA2 "Enable sha2" TRUE)
-option(ENABLE_HASH_SHA3 "Enable sha3" TRUE)
-option(ENABLE_HASH_TIGER "Enable tiger" TRUE)
-option(ENABLE_HASH_BLAKE "Enable blake" TRUE)
-option(ENABLE_HASH_CHC "Enable chc" TRUE)
-option(ENABLE_HASH_HELPER "Enable helper" TRUE)
-option(ENABLE_HASH_WHIRL "Enable whirl" TRUE)
-
-# Mac options
-option(ENABLE_MAC_BLAKE2 "Enable blake2" TRUE)
-option(ENABLE_MAC_F9 "Enable f9" TRUE)
-option(ENABLE_MAC_HMAC "Enable hmac" TRUE)
-option(ENABLE_MAC_OMAC "Enable omac" TRUE)
-option(ENABLE_MAC_PELICAN "Enable pelican" TRUE)
-option(ENABLE_MAC_PMAC "Enable pmac" TRUE)
-option(ENABLE_MAC_POLY1305 "Enable poly1305" TRUE)
-option(ENABLE_MAC_XCBC "Enable xcbc" TRUE)
-
-# Modes options
-option(ENABLE_MODE_CBC "Enable cbc mode" TRUE)
-option(ENABLE_MODE_CFB "Enable cfb mode" TRUE)
-option(ENABLE_MODE_CTR "Enable ctr mode" TRUE)
-option(ENABLE_MODE_ECB "Enable ecb mode" TRUE)
-option(ENABLE_MODE_F8 "Enable f8 mode" TRUE)
-option(ENABLE_MODE_LRW "Enable lrw mode" TRUE)
-option(ENABLE_MODE_OFB "Enable ofb mode" TRUE)
-option(ENABLE_MODE_XTS "Enable xts mode" TRUE)
-
-# Misc options
-option(ENABLE_MISC_BASE16 "Enable base16" TRUE)
-option(ENABLE_MISC_BASE32 "Enable base32" TRUE)
-option(ENABLE_MISC_BASE64 "Enable base64" TRUE)
-option(ENABLE_MISC_CRYPT "Enable crypt" TRUE)
-option(ENABLE_MISC_HKDF "Enable hkdf" TRUE)
-option(ENABLE_MISC_PADDING "Enable padding" TRUE)
-option(ENABLE_MISC_PKCS5 "Enable pkcs5" TRUE)
-
-# Stream options
-option(ENABLE_STREAM_CHACHA "Enable chacha stream" TRUE)
-option(ENABLE_STREAM_RABBIT "Enable rabbit stream" TRUE)
-option(ENABLE_STREAM_RC4 "Enable rc4 stream" TRUE)
-option(ENABLE_STREAM_SALSA20 "Enable salsa20 stream" TRUE)
-option(ENABLE_STREAM_SOBER128 "Enable sober128 stream" TRUE)
-option(ENABLE_STREAM_SOSEMANUK "Enable sosemanuk stream" TRUE)
-
-# Pk options
-option(ENABLE_PK_ASN1_DER "Enable asn1 der" TRUE)
-option(ENABLE_PK_ASN1_X509 "Enable asn1 x509" TRUE)
-option(ENABLE_PK_DH "Enable dh" TRUE)
-option(ENABLE_PK_DSA "Enable dsa" TRUE)
-option(ENABLE_PK_ECC "Enable ecc" TRUE)
-option(ENABLE_PK_PKCS1 "Enable pkcs1" TRUE)
-option(ENABLE_PK_RSA "Enable rsa" TRUE)
 
 #-----------------------------------------------------------------------------
 # Definitions

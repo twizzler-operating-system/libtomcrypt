@@ -1,3 +1,12 @@
+# Pk options
+option(ENABLE_PK_ASN1_DER "Enable asn1 der" TRUE)
+option(ENABLE_PK_ASN1_X509 "Enable asn1 x509" TRUE)
+option(ENABLE_PK_DH "Enable dh" TRUE)
+option(ENABLE_PK_DSA "Enable dsa" TRUE)
+option(ENABLE_PK_ECC "Enable ecc" TRUE)
+option(ENABLE_PK_PKCS1 "Enable pkcs1" TRUE)
+option(ENABLE_PK_RSA "Enable rsa" TRUE)
+
 set(PK_SOURCES)
 
 if(ENABLE_PK_ASN1_DER)

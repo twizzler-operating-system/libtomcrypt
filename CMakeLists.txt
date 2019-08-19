@@ -89,6 +89,11 @@ add_definitions(-DUSE_LTM -DLTM_DESC)
 add_subdirectory(src)
 
 #-----------------------------------------------------------------------------
+# Public headers
+#-----------------------------------------------------------------------------
+get_property(${PROJECT_NAME}-public-headers GLOBAL PROPERTY PUBLIC_HEADERS)
+
+#-----------------------------------------------------------------------------
 # Library targets
 #-----------------------------------------------------------------------------
 add_library(${PROJECT_NAME}-shared SHARED
@@ -106,6 +111,7 @@ add_library(${PROJECT_NAME}-shared SHARED
 
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES SOVERSION ${PROJECT_VERSION})
+set_target_properties(${PROJECT_NAME}-shared PROPERTIES PUBLIC_HEADER "${${PROJECT_NAME}-public-headers}")
 
 target_include_directories(${PROJECT_NAME}-shared INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/headers>
@@ -126,6 +132,7 @@ add_library(${PROJECT_NAME}-static STATIC
 )
 
 set_target_properties(${PROJECT_NAME}-static PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
+set_target_properties(${PROJECT_NAME}-static PROPERTIES PUBLIC_HEADER "${${PROJECT_NAME}-public-headers}")
 
 target_include_directories(${PROJECT_NAME}-static INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/headers>
@@ -152,14 +159,14 @@ install(TARGETS ${PROJECT_NAME}-shared
         COMPONENT "runtime"
         EXPORT ${TARGETS_EXPORT_NAME}
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-#         PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}
 )
 
 install(TARGETS ${PROJECT_NAME}-static
         COMPONENT "development"
         EXPORT ${TARGETS_EXPORT_NAME}
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-#         PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}
 )
 
 # install version file

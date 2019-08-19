@@ -60,12 +60,5 @@ endif()
 #-----------------------------------------------------------------------------
 # MISC
 #-----------------------------------------------------------------------------
-add_library(misc_shared_obj OBJECT
-    ${MISC_SOURCES}
-)
-
-add_library(misc_static_obj OBJECT
-    ${MISC_SOURCES}
-)
-
-set_target_properties(misc_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MISC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MISC_SOURCES})

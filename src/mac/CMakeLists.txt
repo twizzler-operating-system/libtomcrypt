@@ -53,12 +53,5 @@ endif()
 #-----------------------------------------------------------------------------
 # Mac
 #-----------------------------------------------------------------------------
-add_library(mac_shared_obj OBJECT
-    ${MAC_SOURCES}
-)
-
-add_library(mac_static_obj OBJECT
-    ${MAC_SOURCES}
-)
-
-set_target_properties(mac_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MAC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MAC_SOURCES})

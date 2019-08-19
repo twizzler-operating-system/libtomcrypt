@@ -41,12 +41,5 @@ endif()
 #-----------------------------------------------------------------------------
 # Stream
 #-----------------------------------------------------------------------------
-add_library(stream_shared_obj OBJECT
-    ${STREAM_SOURCES}
-)
-
-add_library(stream_static_obj OBJECT
-    ${STREAM_SOURCES}
-)
-
-set_target_properties(stream_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${STREAM_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${STREAM_SOURCES})

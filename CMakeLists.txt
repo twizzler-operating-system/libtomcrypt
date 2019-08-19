@@ -9,15 +9,18 @@ include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
 #-----------------------------------------------------------------------------
-#-----------------------------------------------------------------------------
-
-#-----------------------------------------------------------------------------
 # Definitions
 #-----------------------------------------------------------------------------
 add_definitions(-DUSE_LTM -DLTM_DESC)
 
 #-----------------------------------------------------------------------------
-# Subdirectories
+# Library targets
+#-----------------------------------------------------------------------------
+add_library(${PROJECT_NAME}-shared SHARED)
+add_library(${PROJECT_NAME}-static STATIC)
+
+#-----------------------------------------------------------------------------
+# Add subdirectories
 #-----------------------------------------------------------------------------
 add_subdirectory(src)
 
@@ -27,21 +30,10 @@ add_subdirectory(src)
 get_property(${PROJECT_NAME}-public-headers GLOBAL PROPERTY PUBLIC_HEADERS)
 
 #-----------------------------------------------------------------------------
-# Library targets
+# Library target properties
 #-----------------------------------------------------------------------------
-add_library(${PROJECT_NAME}-shared SHARED
-    $<TARGET_OBJECTS:ciphers_shared_obj>
-    $<TARGET_OBJECTS:encauth_shared_obj>
-    $<TARGET_OBJECTS:hash_shared_obj>
-    $<TARGET_OBJECTS:mac_shared_obj>
-    $<TARGET_OBJECTS:math_shared_obj>
-    $<TARGET_OBJECTS:misc_shared_obj>
-    $<TARGET_OBJECTS:modes_shared_obj>
-    $<TARGET_OBJECTS:pk_shared_obj>
-    $<TARGET_OBJECTS:stream_shared_obj>
-    $<TARGET_OBJECTS:prngs_shared_obj>
-)
 
+# shared
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES SOVERSION ${PROJECT_VERSION})
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES PUBLIC_HEADER "${${PROJECT_NAME}-public-headers}")
@@ -51,19 +43,7 @@ target_include_directories(${PROJECT_NAME}-shared INTERFACE
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}>
 )
 
-add_library(${PROJECT_NAME}-static STATIC
-    $<TARGET_OBJECTS:ciphers_static_obj>
-    $<TARGET_OBJECTS:encauth_static_obj>
-    $<TARGET_OBJECTS:hash_static_obj>
-    $<TARGET_OBJECTS:mac_static_obj>
-    $<TARGET_OBJECTS:math_static_obj>
-    $<TARGET_OBJECTS:misc_static_obj>
-    $<TARGET_OBJECTS:modes_static_obj>
-    $<TARGET_OBJECTS:pk_static_obj>
-    $<TARGET_OBJECTS:stream_static_obj>
-    $<TARGET_OBJECTS:prngs_static_obj>
-)
-
+# static
 set_target_properties(${PROJECT_NAME}-static PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 set_target_properties(${PROJECT_NAME}-static PROPERTIES PUBLIC_HEADER "${${PROJECT_NAME}-public-headers}")
 

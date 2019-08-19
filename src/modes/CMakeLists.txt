@@ -53,12 +53,5 @@ endif()
 #-----------------------------------------------------------------------------
 # Modes
 #-----------------------------------------------------------------------------
-add_library(modes_shared_obj OBJECT
-    ${MODES_SOURCES}
-)
-
-add_library(modes_static_obj OBJECT
-    ${MODES_SOURCES}
-)
-
-set_target_properties(modes_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MODES_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MODES_SOURCES})

@@ -80,12 +80,5 @@ endif()
 #-----------------------------------------------------------------------------
 # Pk
 #-----------------------------------------------------------------------------
-add_library(pk_shared_obj OBJECT
-    ${PK_SOURCES}
-)
-
-add_library(pk_static_obj OBJECT
-    ${PK_SOURCES}
-)
-
-set_target_properties(pk_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${PK_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${PK_SOURCES})

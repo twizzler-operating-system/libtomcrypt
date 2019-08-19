@@ -12,12 +12,5 @@ set(MATH_SOURCES
 #-----------------------------------------------------------------------------
 # MATH
 #-----------------------------------------------------------------------------
-add_library(math_shared_obj OBJECT
-    ${MATH_SOURCES}
-)
-
-add_library(math_static_obj OBJECT
-    ${MATH_SOURCES}
-)
-
-set_target_properties(math_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MATH_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MATH_SOURCES})

@@ -90,12 +90,5 @@ endif()
 #-----------------------------------------------------------------------------
 # Hash
 #-----------------------------------------------------------------------------
-add_library(hash_shared_obj OBJECT
-    ${HASH_SOURCES}
-)
-
-add_library(hash_static_obj OBJECT
-    ${HASH_SOURCES}
-)
-
-set_target_properties(hash_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${HASH_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${HASH_SOURCES})

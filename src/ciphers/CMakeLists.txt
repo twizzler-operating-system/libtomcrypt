@@ -25,12 +25,5 @@ set(CIPHERS_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/xtea.c
 )
 
-add_library(ciphers_shared_obj OBJECT
-    ${CIPHERS_SOURCES}
-)
-
-add_library(ciphers_static_obj OBJECT
-    ${CIPHERS_SOURCES}
-)
-
-set_target_properties(ciphers_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${CIPHERS_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${CIPHERS_SOURCES})

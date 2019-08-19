@@ -41,12 +41,6 @@ endif()
 #-----------------------------------------------------------------------------
 # Encauth
 #-----------------------------------------------------------------------------
-add_library(encauth_shared_obj OBJECT
-    ${ENCAUTH_SOURCES}
-)
 
-add_library(encauth_static_obj OBJECT
-    ${ENCAUTH_SOURCES}
-)
-
-set_target_properties(encauth_shared_obj PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
+target_sources(${PROJECT_NAME}-shared PRIVATE ${ENCAUTH_CCM_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${ENCAUTH_CCM_SOURCES})

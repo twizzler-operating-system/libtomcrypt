@@ -60,6 +60,10 @@ timing.exe
 .cproject
 .settings/
 
+# KDevelop special files
+*.kdev4
+
+
 # macOS special files
 .DS_Store
 

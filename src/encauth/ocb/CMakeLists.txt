@@ -10,5 +10,7 @@ set(ENCAUTH_OCB_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/ocb_encrypt.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ocb_done_decrypt.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ocb_encrypt_authenticate_memory.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${ENCAUTH_OCB_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${ENCAUTH_OCB_SOURCES})

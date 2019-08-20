@@ -7,5 +7,7 @@ set(MODE_LRW_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/lrw_setiv.c
     ${CMAKE_CURRENT_SOURCE_DIR}/lrw_decrypt.c
     ${CMAKE_CURRENT_SOURCE_DIR}/lrw_encrypt.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MODE_LRW_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MODE_LRW_SOURCES})

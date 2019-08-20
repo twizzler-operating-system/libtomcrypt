@@ -9,5 +9,7 @@ set(MAC_BLAKE2_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/blake2bmac_test.c
     ${CMAKE_CURRENT_SOURCE_DIR}/blake2bmac.c
     ${CMAKE_CURRENT_SOURCE_DIR}/blake2smac_test.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MAC_BLAKE2_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MAC_BLAKE2_SOURCES})

@@ -6,5 +6,7 @@ set(MAC_OMAC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/omac_test.c
     ${CMAKE_CURRENT_SOURCE_DIR}/omac_process.c
     ${CMAKE_CURRENT_SOURCE_DIR}/omac_memory.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MAC_OMAC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MAC_OMAC_SOURCES})

@@ -13,5 +13,7 @@ set(PK_RSA_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/rsa_import_pkcs8.c
     ${CMAKE_CURRENT_SOURCE_DIR}/rsa_verify_hash.c
     ${CMAKE_CURRENT_SOURCE_DIR}/rsa_free.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${PK_RSA_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${PK_RSA_SOURCES})

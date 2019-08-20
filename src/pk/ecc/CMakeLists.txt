@@ -37,5 +37,7 @@ set(PK_ECC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/ecc_encrypt_key.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ltc_ecc_export_point.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ecc_sign_hash.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${PK_ECC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${PK_ECC_SOURCES})

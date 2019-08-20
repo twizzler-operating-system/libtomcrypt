@@ -7,5 +7,7 @@ set(ENCAUTH_CCM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/ccm_memory.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ccm_process.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ccm_init.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${ENCAUTH_CCM_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${ENCAUTH_CCM_SOURCES})

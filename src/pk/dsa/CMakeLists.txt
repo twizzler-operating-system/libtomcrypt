@@ -13,5 +13,7 @@ set(PK_DSA_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/dsa_import.c
     ${CMAKE_CURRENT_SOURCE_DIR}/dsa_set.c
     ${CMAKE_CURRENT_SOURCE_DIR}/dsa_sign_hash.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${PK_DSA_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${PK_DSA_SOURCES})

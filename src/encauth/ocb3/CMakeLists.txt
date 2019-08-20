@@ -11,5 +11,7 @@ set(ENCAUTH_OCB3_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_encrypt.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_decrypt.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ocb3_done.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${ENCAUTH_OCB3_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${ENCAUTH_OCB3_SOURCES})

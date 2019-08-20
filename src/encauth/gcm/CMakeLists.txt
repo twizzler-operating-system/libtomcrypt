@@ -9,5 +9,7 @@ set(ENCAUTH_GCM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/gcm_process.c
     ${CMAKE_CURRENT_SOURCE_DIR}/gcm_reset.c
     ${CMAKE_CURRENT_SOURCE_DIR}/gcm_test.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${ENCAUTH_GCM_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${ENCAUTH_GCM_SOURCES})

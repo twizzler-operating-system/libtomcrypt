@@ -1,4 +1,6 @@
+#-----------------------------------------------------------------------------
 # Misc options
+#-----------------------------------------------------------------------------
 option(ENABLE_MISC_BASE16 "Enable base16" TRUE)
 option(ENABLE_MISC_BASE32 "Enable base32" TRUE)
 option(ENABLE_MISC_BASE64 "Enable base64" TRUE)
@@ -21,61 +23,48 @@ set(MISC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/zeromem.c
 )
 
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MISC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MISC_SOURCES})
+
 #-----------------------------------------------------------------------------
 # Add subdirectories sources depending on enabled options
 #-----------------------------------------------------------------------------
 if(ENABLE_MISC_BASE16)
     add_subdirectory(base16)
-    list(APPEND MISC_SOURCES ${MISC_BASE16_SOURCES})
 endif()
 
 if(ENABLE_MISC_BASE32)
     add_subdirectory(base32)
-    list(APPEND MISC_SOURCES ${MISC_BASE32_SOURCES})
 endif()
 
 if(ENABLE_MISC_BASE64)
     add_subdirectory(base64)
-    list(APPEND MISC_SOURCES ${MISC_BASE64_SOURCES})
 endif()
 
 if(ENABLE_MISC_CRYPT)
     add_subdirectory(crypt)
-    list(APPEND MISC_SOURCES ${MISC_CRYPT_SOURCES})
 endif()
 
 if(ENABLE_MISC_HKDF)
     add_subdirectory(hkdf)
-    list(APPEND MISC_SOURCES ${MISC_HKDF_SOURCES})
 endif()
 
 if(ENABLE_MISC_PADDING)
     add_subdirectory(padding)
-    list(APPEND MISC_SOURCES ${MISC_PADDING_SOURCES})
 endif()
 
 if(ENABLE_MISC_PKCS12)
     add_subdirectory(pkcs12)
-    list(APPEND MISC_SOURCES ${MISC_PKCS12_SOURCES})
 endif()
 
 if(ENABLE_MISC_PKCS5)
     add_subdirectory(pkcs5)
-    list(APPEND MISC_SOURCES ${MISC_PKCS5_SOURCES})
 endif()
 
 if(ENABLE_MISC_SSH)
     add_subdirectory(ssh)
-    list(APPEND MISC_SOURCES ${MISC_SSH_SOURCES})
 endif()
 
 if(ENABLE_MISC_PBES)
     add_subdirectory(pbes)
-    list(APPEND MISC_SOURCES ${MISC_PBES_SOURCES})
 endif()
-
-#-----------------------------------------------------------------------------
-# MISC
-#-----------------------------------------------------------------------------
-target_sources(${PROJECT_NAME}-shared PRIVATE ${MISC_SOURCES})
-target_sources(${PROJECT_NAME}-static PRIVATE ${MISC_SOURCES})

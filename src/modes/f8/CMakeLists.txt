@@ -6,5 +6,7 @@ set(MODE_F8_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/f8_encrypt.c
     ${CMAKE_CURRENT_SOURCE_DIR}/f8_start.c
     ${CMAKE_CURRENT_SOURCE_DIR}/f8_getiv.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MODE_F8_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MODE_F8_SOURCES})

@@ -30,5 +30,7 @@ set(MISC_CRYPT_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/crypt_unregister_prng.c
     ${CMAKE_CURRENT_SOURCE_DIR}/crypt_register_prng.c
     ${CMAKE_CURRENT_SOURCE_DIR}/crypt_find_hash_oid.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MISC_CRYPT_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MISC_CRYPT_SOURCES})

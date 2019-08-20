@@ -1,5 +1,7 @@
 set(MISC_PKCS12_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/pkcs12_kdf.c
     ${CMAKE_CURRENT_SOURCE_DIR}/pkcs12_utf8_to_utf16.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MISC_PKCS12_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MISC_PKCS12_SOURCES})

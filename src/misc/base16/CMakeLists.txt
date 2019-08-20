@@ -1,5 +1,7 @@
 set(MISC_BASE16_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/base16_encode.c
     ${CMAKE_CURRENT_SOURCE_DIR}/base16_decode.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MISC_BASE16_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MISC_BASE16_SOURCES})

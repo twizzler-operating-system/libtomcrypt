@@ -2,5 +2,7 @@ set(STREAM_SOSEMANUK_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/sosemanuk.c
     ${CMAKE_CURRENT_SOURCE_DIR}/sosemanuk_test.c
     ${CMAKE_CURRENT_SOURCE_DIR}/sosemanuk_memory.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${STREAM_SOSEMANUK_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${STREAM_SOSEMANUK_SOURCES})

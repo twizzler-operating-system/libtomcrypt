@@ -1,4 +1,6 @@
+#-----------------------------------------------------------------------------
 # Hash options
+#-----------------------------------------------------------------------------
 option(ENABLE_HASH_MD "Enable md" TRUE)
 option(ENABLE_HASH_RMD "Enable rmd" TRUE)
 option(ENABLE_HASH_SHA1 "Enable sha1" TRUE)
@@ -69,22 +71,18 @@ endif()
 
 if(ENABLE_HASH_SHA2)
     add_subdirectory(sha2)
-    list(APPEND HASH_SOURCES ${HASH_SHA2_SOURCES})
 endif()
 
 if(ENABLE_HASH_CHC)
     add_subdirectory(chc)
-    list(APPEND HASH_SOURCES ${HASH_CHC_SOURCES})
 endif()
 
 if(ENABLE_HASH_HELPER)
     add_subdirectory(helper)
-    list(APPEND HASH_SOURCES ${HASH_HELPER_SOURCES})
 endif()
 
 if(ENABLE_HASH_WHIRL)
     add_subdirectory(whirl)
-    list(APPEND HASH_SOURCES ${HASH_WHIRL_SOURCES})
 endif()
 
 #-----------------------------------------------------------------------------

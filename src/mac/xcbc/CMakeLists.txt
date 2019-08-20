@@ -6,5 +6,7 @@ set(MAC_XCBC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_memory.c
     ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_test.c
     ${CMAKE_CURRENT_SOURCE_DIR}/xcbc_init.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MAC_XCBC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MAC_XCBC_SOURCES})

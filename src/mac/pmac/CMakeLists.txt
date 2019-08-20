@@ -8,5 +8,7 @@ set(MAC_PMAC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/pmac_done.c
     ${CMAKE_CURRENT_SOURCE_DIR}/pmac_test.c
     ${CMAKE_CURRENT_SOURCE_DIR}/pmac_process.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MAC_PMAC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MAC_PMAC_SOURCES})

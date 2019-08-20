@@ -9,5 +9,7 @@ set(PK_DH_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/dh_generate_key.c
     ${CMAKE_CURRENT_SOURCE_DIR}/dh_export.c
     ${CMAKE_CURRENT_SOURCE_DIR}/dh.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${PK_DH_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${PK_DH_SOURCES})

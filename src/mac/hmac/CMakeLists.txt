@@ -6,5 +6,7 @@ set(MAC_HMAC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/hmac_file.c
     ${CMAKE_CURRENT_SOURCE_DIR}/hmac_memory_multi.c
     ${CMAKE_CURRENT_SOURCE_DIR}/hmac_done.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MAC_HMAC_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MAC_HMAC_SOURCES})

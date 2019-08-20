@@ -7,5 +7,7 @@ set(ENCAUTH_EAX_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/eax_encrypt.c
     ${CMAKE_CURRENT_SOURCE_DIR}/eax_encrypt_authenticate_memory.c
     ${CMAKE_CURRENT_SOURCE_DIR}/eax_addheader.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${ENCAUTH_EAX_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${ENCAUTH_EAX_SOURCES})

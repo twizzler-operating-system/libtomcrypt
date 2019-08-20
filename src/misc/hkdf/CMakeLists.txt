@@ -1,5 +1,7 @@
 set(MISC_HKDF_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/hkdf.c
     ${CMAKE_CURRENT_SOURCE_DIR}/hkdf_test.c
-    PARENT_SCOPE
 )
+
+target_sources(${PROJECT_NAME}-shared PRIVATE ${MISC_HKDF_SOURCES})
+target_sources(${PROJECT_NAME}-static PRIVATE ${MISC_HKDF_SOURCES})

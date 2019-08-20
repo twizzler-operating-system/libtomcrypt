@@ -14,7 +14,6 @@ set(MISC_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/copy_or_zeromem.c
     ${CMAKE_CURRENT_SOURCE_DIR}/error_to_string.c
     ${CMAKE_CURRENT_SOURCE_DIR}/burn_stack.c
-#     ${CMAKE_CURRENT_SOURCE_DIR}/pk_get_oid.c
     ${CMAKE_CURRENT_SOURCE_DIR}/crc32.c
     ${CMAKE_CURRENT_SOURCE_DIR}/compare_testvector.c
     ${CMAKE_CURRENT_SOURCE_DIR}/adler32.c

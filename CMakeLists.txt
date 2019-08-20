@@ -7,17 +7,29 @@ project(tomcrypt VERSION 1.18.2)
 #-----------------------------------------------------------------------------
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
+include(FindPkgConfig)
 
 #-----------------------------------------------------------------------------
-# Definitions
+# Options
 #-----------------------------------------------------------------------------
-add_definitions(-DUSE_LTM -DLTM_DESC)
+option(USE_LTM "Build with libtommath" TRUE)
 
 #-----------------------------------------------------------------------------
 # Library targets
 #-----------------------------------------------------------------------------
 add_library(${PROJECT_NAME}-shared SHARED)
 add_library(${PROJECT_NAME}-static STATIC)
+
+#-----------------------------------------------------------------------------
+# Definitions
+#-----------------------------------------------------------------------------
+
+if(USE_LTM)
+    pkg_check_modules(LTM REQUIRED IMPORTED_TARGET libtommath>=1.1.0)
+
+    target_compile_definitions(${PROJECT_NAME}-shared PUBLIC USE_LTM LTM_DESC)
+    target_compile_definitions(${PROJECT_NAME}-static PUBLIC USE_LTM LTM_DESC)
+endif()
 
 #-----------------------------------------------------------------------------
 # Add subdirectories
@@ -51,6 +63,12 @@ target_include_directories(${PROJECT_NAME}-static PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/headers>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lib${PROJECT_NAME}>
 )
+
+# libtommath dependent
+if(USE_LTM)
+    target_link_libraries(${PROJECT_NAME}-shared INTERFACE PkgConfig::LTM)
+    target_link_libraries(${PROJECT_NAME}-static INTERFACE PkgConfig::LTM)
+endif()
 
 #---------------------------------------------------------------------------------------
 # Install/export targets and files

@@ -20,7 +20,7 @@
 
 #ifdef LTC_SPRNG
 
-const struct ltc_prng_descriptor sprng_desc =
+static const struct ltc_prng_descriptor sprng_desc =
 {
     "sprng", 0,
     &sprng_start,
@@ -40,7 +40,8 @@ const struct ltc_prng_descriptor sprng_desc =
 */
 int sprng_start(prng_state *prng)
 {
-   LTC_UNUSED_PARAM(prng);
+   LTC_ARGCHK(prng != NULL);
+   prng->desc = sprng_desc;
    return CRYPT_OK;
 }
 

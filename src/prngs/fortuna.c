@@ -45,7 +45,7 @@ we reseed automatically when len(pool0) >= 64 or every LTC_FORTUNA_WD calls to t
    #error LTC_FORTUNA_POOLS must be in [4..32]
 #endif
 
-const struct ltc_prng_descriptor fortuna_desc = {
+static const struct ltc_prng_descriptor fortuna_desc = {
     "fortuna",
     64,
     &fortuna_start,
@@ -249,6 +249,8 @@ int fortuna_start(prng_state *prng)
       return err;
    }
    zeromem(prng->u.fortuna.IV, 16);
+
+   prng->desc = fortuna_desc;
 
    LTC_MUTEX_INIT(&prng->lock)
 

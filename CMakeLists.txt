@@ -23,9 +23,8 @@ add_library(${PROJECT_NAME}-static STATIC)
 #-----------------------------------------------------------------------------
 # Definitions
 #-----------------------------------------------------------------------------
-
 if(USE_LTM)
-    pkg_check_modules(LTM REQUIRED IMPORTED_TARGET libtommath>=1.1.0)
+    find_package(tommath 1.2.0 REQUIRED)
 
     target_compile_definitions(${PROJECT_NAME}-shared PUBLIC USE_LTM LTM_DESC)
     target_compile_definitions(${PROJECT_NAME}-static PUBLIC USE_LTM LTM_DESC)
@@ -67,8 +66,8 @@ target_include_directories(${PROJECT_NAME}-static PUBLIC
 
 # libtommath dependent
 if(USE_LTM)
-    target_link_libraries(${PROJECT_NAME}-shared INTERFACE PkgConfig::LTM)
-    target_link_libraries(${PROJECT_NAME}-static INTERFACE PkgConfig::LTM)
+    target_link_libraries(${PROJECT_NAME}-shared INTERFACE tommath)
+    target_link_libraries(${PROJECT_NAME}-static INTERFACE tommath)
 endif()
 
 #---------------------------------------------------------------------------------------

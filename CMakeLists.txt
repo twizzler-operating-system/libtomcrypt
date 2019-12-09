@@ -7,7 +7,6 @@ project(tomcrypt VERSION 1.18.2)
 #-----------------------------------------------------------------------------
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
-include(FindPkgConfig)
 
 #-----------------------------------------------------------------------------
 # Options

@@ -454,6 +454,10 @@
 						/>
 					</FileConfiguration>
 				</File>
+				<File
+					RelativePath="src\ciphers\aes\aesni.c"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="safer"

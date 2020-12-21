@@ -46,6 +46,10 @@ env:
     BUILDOPTIONS="-ULTM_DESC -UTFM_DESC -UUSE_LTM -UUSE_TFM"
     BUILDSCRIPT=".ci/run.sh"
   - |
+    BUILDNAME="STOCK+AESNI"
+    BUILDOPTIONS="-msse4.1 -maes"
+    BUILDSCRIPT=".ci/run.sh"
+  - |
     BUILDNAME="EASY"
     BUILDOPTIONS="-DLTC_EASY"
     BUILDSCRIPT=".ci/run.sh"

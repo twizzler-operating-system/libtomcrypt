@@ -14,11 +14,19 @@
    portable way to get secure random bits to feed a PRNG (Tom St Denis)
 */
 
+#include <sys/syscall.h>
+
 #if defined(LTC_DEVRANDOM) && !defined(_WIN32)
 /* on *NIX read /dev/random */
 static unsigned long _rng_nix(unsigned char *buf, unsigned long len,
                              void (*callback)(void))
 {
+	(void)callback;
+
+#if __twizzler__
+	return syscall(SYS_getrandom, buf, len, 0);
+#endif
+	return getrandom(buf, len, 0);
 #ifdef LTC_NO_FILE
     LTC_UNUSED_PARAM(callback);
     LTC_UNUSED_PARAM(buf);
@@ -133,6 +141,7 @@ unsigned long rng_get_bytes(unsigned char *out, unsigned long outlen,
 
    LTC_ARGCHK(out != NULL);
 
+   
 #ifdef LTC_PRNG_ENABLE_LTC_RNG
    if (ltc_rng) {
       x = ltc_rng(out, outlen, callback);

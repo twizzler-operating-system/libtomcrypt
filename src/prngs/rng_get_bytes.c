@@ -14,6 +14,7 @@
    portable way to get secure random bits to feed a PRNG (Tom St Denis)
 */
 
+#ifndef __KERNEL__
 #include <sys/syscall.h>
 
 #if defined(LTC_DEVRANDOM) && !defined(_WIN32)
@@ -161,6 +162,7 @@ unsigned long rng_get_bytes(unsigned char *out, unsigned long outlen,
 #endif
    return 0;
 }
+#endif
 #endif /* #ifdef LTC_RNG_GET_BYTES */
 
 /* ref:         $Format:%D$ */

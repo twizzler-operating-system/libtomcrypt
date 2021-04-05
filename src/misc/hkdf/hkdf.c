@@ -8,8 +8,10 @@
  */
 
 #include <assert.h>
+#ifndef __KERNEL__
 #include <stdio.h>
 #include <stdlib.h>
+#endif
 
 #include "tomcrypt.h"
 

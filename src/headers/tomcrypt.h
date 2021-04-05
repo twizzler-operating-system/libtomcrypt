@@ -10,13 +10,17 @@
 #ifndef TOMCRYPT_H_
 #define TOMCRYPT_H_
 #include <assert.h>
+#ifndef __KERNEL__
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-#include <stddef.h>
 #include <time.h>
 #include <ctype.h>
+#else
+typedef long clock_t;
+#endif
 #include <limits.h>
+#include <string.h>
+#include <stddef.h>
 
 /* use configuration data */
 #include <tomcrypt_custom.h>
